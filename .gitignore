@@ -1,0 +1,5 @@
+*.[oa]
+*.so
+*.swp
+tags
+cscope.*
