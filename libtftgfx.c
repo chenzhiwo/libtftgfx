@@ -118,7 +118,7 @@ void gfxInit(gfxInitStruct gfxInitStr)
 	gfxDrawBitMapBin  = gfxInitStr.HWDrawBitMapBinFunc;
 }
 
-void gfxPrintASCII5x8(int x, int y, uchar string[], uchar colorFG, uchar colorBG)
+void gfxPrintASCII5x8(int x, int y, char string[], uchar colorFG, uchar colorBG)
 {
 	int offset = 0, offset_x = 0;
 	while(string[offset] != '\0')

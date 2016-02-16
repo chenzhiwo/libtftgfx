@@ -18,7 +18,7 @@ void (*gfxDrawBitMap)(int x, int y, int w, int h, uchar bitMap[], uchar colorFG,
 void (*gfxDrawBitMapBin)(int x, int y, int w, int h, uchar bitMap[], uchar colorFG, uchar colorBG);
 
 void gfxInit(gfxInitStruct gfxInitStr);
-void gfxPrintASCII5x8(int x, int y, uchar string[], uchar colorFG, uchar colorBG);
+void gfxPrintASCII5x8(int x, int y, char string[], uchar colorFG, uchar colorBG);
 void gfxDrawLine(int x0, int y0, int x1, int y1, uchar color);
 void gfxDrawFastHLine(int x, int y, int w, uchar color);
 void gfxDrawFastVLine(int x, int y, int h, uchar color);
