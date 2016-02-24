@@ -14,6 +14,11 @@ clean:
 
 rebuild:clean all
 
+install:all
+	install --mode=0644 libtftgfx.so /usr/local/lib/
+	install --mode=0644 libtftgfx.a /usr/local/lib/
+	install --mode=0644 libtftgfx.h /usr/local/include/
+
 $(PROG_NAME).so:libtftgfx.o
 	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS) -shared -fPIC
 
