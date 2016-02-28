@@ -3,6 +3,7 @@ PERFIX=/usr
 
 CC = gcc
 CFLAGS = -Wall -O0
+LIB_CFLAGS=$(CFLAGS) -fPIC -shared
 LDFLAGS =
 
 .PHONY:clean rebuild
@@ -26,11 +27,10 @@ uninstall:
 	-rm $(PERFIX)/include/libtftgfx.h
 
 $(PROG_NAME).so:libtftgfx.o
-	$(CC) $^ -o $@ $(CFLAGS) $(LDFLAGS) -shared -fPIC
+	$(CC) $^ -o $@ $(LDFLAGS) $(LIB_CFLAGS)
 
 $(PROG_NAME).a:libtftgfx.o
 	ar -rcs $@ $^
 
-
-
 libtftgfx.o: libtftgfx.c libtftgfx.h
+	$(CC) $^ -o $@  $(LIB_CFLAGS)
